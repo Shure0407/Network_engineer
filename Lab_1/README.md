@@ -65,6 +65,8 @@ e. Виртуальный порт для удаленного подключе�
 
 f. При подключении Ethernet кабеля к порту 0/6, интерфейс и линейный протокол "поднялся"
 
+![схема подключения](https://github.com/Shure0407/Network_engineer/assets/162669909/5d116db1-f547-4d46-b247-03597c48cf43)
+
 ![Подключение к порту FE0_6](https://github.com/Shure0407/Network_engineer/assets/162669909/5b423f14-dd46-4aa3-8788-85cec6a20489)
 
 g. Версия ОС Cisco IOS на коммутаторе 15.0(2)SE4, файл образа системы с расширением bin.
@@ -95,6 +97,7 @@ a. В режиме глобальной конфигурации настраи�
 
 
 Включение кодировки пароля
+
 ![service pass-encr](https://github.com/Shure0407/Network_engineer/assets/162669909/2c58a02c-970c-4629-9d4c-6c352b39a4d5)
 
 ![service pass-encr1](https://github.com/Shure0407/Network_engineer/assets/162669909/841b3142-4fd5-4e5d-a246-b1dec13b345c)
@@ -102,12 +105,15 @@ a. В режиме глобальной конфигурации настраи�
 ![service pass-encr2](https://github.com/Shure0407/Network_engineer/assets/162669909/72eed2f3-d90c-4163-8a4d-3948f3d6fd24)
 
 Установка приветственного баннера
+
 ![Banner](https://github.com/Shure0407/Network_engineer/assets/162669909/b61dcbd3-f129-41b9-9289-c0cd46462c2c)
 
 Настройка виртуальных портов
+
 ![line vty](https://github.com/Shure0407/Network_engineer/assets/162669909/4f52dda3-94d7-479a-afc6-4f3a7c3116b9)
 
 Копируем из running-config в start-config на коммутаторе
+
 ![copy startup config ](https://github.com/Shure0407/Network_engineer/assets/162669909/5efccba2-27dc-4db7-afbc-9b69a0d1a920)
 
 Загрузочный файл на коммутаторе
@@ -117,6 +123,7 @@ a. В режиме глобальной конфигурации настраи�
 ![startup config 2](https://github.com/Shure0407/Network_engineer/assets/162669909/66068f79-8958-4809-acbf-90b2b6e5325a)
 
 b. Назначаем IP-адрес интерфейсу SVI на коммутаторе.
+
 ![IP SVI](https://github.com/Shure0407/Network_engineer/assets/162669909/c039c64c-058f-4036-bf5a-09eafb7b7041)
 
 ![int vlan в run conf](https://github.com/Shure0407/Network_engineer/assets/162669909/75f20c0b-a607-4356-b192-fd23063ee65d)
@@ -145,6 +152,7 @@ a. running-config
 
 b. Проверка параметров VLAN 1.
 Полоса  пропускания BW - 100000Kbit
+
 ![interface vlan1](https://github.com/Shure0407/Network_engineer/assets/162669909/0a63a1a8-342f-4132-ade8-6ff949bb236a)
 
 - Шаг 2. Тестируем сквозное соединение, отправив эхо-запрос.
