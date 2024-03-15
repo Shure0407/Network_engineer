@@ -1,5 +1,12 @@
 ## Лабораторная работа №1. Базовая настройка коммутатора.
 
+### Топология
+
+![топология](https://github.com/Shure0407/Network_engineer/assets/162669909/cdca3b13-dd03-4b90-b0f8-ff38f3cdb80d)
+
+### Таблица адресации
+![Таблица адресации](https://github.com/Shure0407/Network_engineer/assets/162669909/728b67d7-98c8-4fbd-96fd-825ba88d5c18)
+
 ### Задачи.
 Часть 1. Проверка конфигурации коммутатора по умолчанию
 
@@ -75,3 +82,83 @@ i. Образу Cisco присвоено имя 2960-lanbasek9-mz.150-2.SE4.bin
 #### Часть 2. Настройка базовых параметров сетевых устройств
 
 - Шаг 1. Настройте базовые параметры коммутатора.
+
+a. В режиме глобальной конфигурации настраиваем базовые параметры и копируем в start-config на коммутаторе
+
+Изменение имени хоста
+
+![Изменение имени хоста](https://github.com/Shure0407/Network_engineer/assets/162669909/48ef2c43-128c-4be0-8ee2-b1e1ac91c11b)
+
+Установка пароля на привилегированный режим
+
+![установка пароля на привелиг режим](https://github.com/Shure0407/Network_engineer/assets/162669909/a07ad063-3022-4cc8-b260-5a08d0f92822)
+
+
+Включение кодировки пароля
+![service pass-encr](https://github.com/Shure0407/Network_engineer/assets/162669909/2c58a02c-970c-4629-9d4c-6c352b39a4d5)
+
+![service pass-encr1](https://github.com/Shure0407/Network_engineer/assets/162669909/841b3142-4fd5-4e5d-a246-b1dec13b345c)
+
+![service pass-encr2](https://github.com/Shure0407/Network_engineer/assets/162669909/72eed2f3-d90c-4163-8a4d-3948f3d6fd24)
+
+Установка приветственного баннера
+![Banner](https://github.com/Shure0407/Network_engineer/assets/162669909/b61dcbd3-f129-41b9-9289-c0cd46462c2c)
+
+Настройка виртуальных портов
+![line vty](https://github.com/Shure0407/Network_engineer/assets/162669909/4f52dda3-94d7-479a-afc6-4f3a7c3116b9)
+
+Копируем из running-config в start-config на коммутаторе
+![copy startup config ](https://github.com/Shure0407/Network_engineer/assets/162669909/5efccba2-27dc-4db7-afbc-9b69a0d1a920)
+
+Загрузочный файл на коммутаторе
+
+![startup config 1](https://github.com/Shure0407/Network_engineer/assets/162669909/a6f963c6-46d2-430c-a20d-2ffa4b6b07a5)
+
+![startup config 2](https://github.com/Shure0407/Network_engineer/assets/162669909/66068f79-8958-4809-acbf-90b2b6e5325a)
+
+b. Назначаем IP-адрес интерфейсу SVI на коммутаторе.
+![IP SVI](https://github.com/Shure0407/Network_engineer/assets/162669909/c039c64c-058f-4036-bf5a-09eafb7b7041)
+
+![int vlan в run conf](https://github.com/Shure0407/Network_engineer/assets/162669909/75f20c0b-a607-4356-b192-fd23063ee65d)
+
+c. Установка пароля консольного подключения.
+
+![Установка пароля консоли](https://github.com/Shure0407/Network_engineer/assets/162669909/10929267-0dc2-4391-8afe-4c32936e2510)
+
+d. Настройка каналов виртуального соединения для удаленного управления (vty)
+
+![Настройка подкл vty по протоколу telnet](https://github.com/Shure0407/Network_engineer/assets/162669909/44e8fcb4-0e95-45dd-9a09-b2b7de94cbfd)
+
+- Шаг 2. Настройте IP-адрес на компьютере PC-A.
+
+![IP адрес РС](https://github.com/Shure0407/Network_engineer/assets/162669909/a99baaed-859a-4490-bb22-8d422270e487)
+
+#### Часть 3. Проверка сетевых подключений
+
+- Шаг 1. Конфигурация коммутатора.
+
+a. running-config
+
+![running-config 3](https://github.com/Shure0407/Network_engineer/assets/162669909/2b2400f1-676c-4705-b283-f57ea1affcb6)
+
+![running-config4](https://github.com/Shure0407/Network_engineer/assets/162669909/9ae9d7b8-1903-46ef-b692-e3a52e83a09b)
+
+b. Проверка параметров VLAN 1.
+Полоса  пропускания BW - 100000Kbit
+![interface vlan1](https://github.com/Shure0407/Network_engineer/assets/162669909/0a63a1a8-342f-4132-ade8-6ff949bb236a)
+
+- Шаг 2. Тестируем сквозное соединение, отправив эхо-запрос.
+
+a. Проверяем связь с адресом PC-A.
+
+![ping to PC](https://github.com/Shure0407/Network_engineer/assets/162669909/04f95dd0-ff07-4ad9-bf6b-3099dc68acc4)
+
+b. Отправляем эхо-запрос на административный адрес интерфейса SVI коммутатора S1
+
+![ping to S1](https://github.com/Shure0407/Network_engineer/assets/162669909/fe261808-246e-4ae0-9d12-495271c50076)
+
+- Шаг 3. Проверка удаленного управления коммутатором S1.
+
+![Telnet подключение](https://github.com/Shure0407/Network_engineer/assets/162669909/a463c0bb-673a-4604-b120-a93a4bc7bc8c)
+
+![Удаленный доступ к S1](https://github.com/Shure0407/Network_engineer/assets/162669909/a5e1815e-fa82-4dfa-982f-70a1c5145ea6)
