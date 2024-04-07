@@ -58,4 +58,22 @@ b.
 
 #### Часть 3. Проверка сквозного подключения
 
+a. С PC-A отправляем эхо-запрос на локальный адрес интерфейса G 0/0/1 на R1: FE80::1. 
 
+![ping PC A to fe80 1](https://github.com/Shure0407/Network_engineer/assets/162669909/834feb11-f98a-4b67-9fb3-f635143a4f99)
+
+b. Отправляем эхо-запрос с PC-A на интерфейс управления S1.
+
+![ping PC A to fe80 5 S1](https://github.com/Shure0407/Network_engineer/assets/162669909/921b2eda-7712-4b57-91c5-97c5aa434720)
+
+с. Вводим команду tracert на PC-A, чтобы проверить наличие сквозного подключения к PC-B.
+
+С PC-B отправляем эхо-запрос на PC-A.
+
+![tracert](https://github.com/Shure0407/Network_engineer/assets/162669909/8af206fa-489d-4d5b-9a78-c2109c903d98)
+
+![ping PC B to PC A](https://github.com/Shure0407/Network_engineer/assets/162669909/6dbee0aa-ec4a-4b94-8a42-89b77e481468)
+
+d. С PC-B отправляем эхо-запрос на локальный адрес канала интерфейса G0/0/0 на R1.
+
+![ping PC B to fe80 1 G000 R1](https://github.com/Shure0407/Network_engineer/assets/162669909/7854409e-34db-4205-8852-97126e7587a0)
