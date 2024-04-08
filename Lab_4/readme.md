@@ -8,80 +8,115 @@
 
 ![Таблица адресации](https://github.com/Shure0407/Network_engineer/assets/162669909/8677f1e3-a908-4889-9264-f9eedf1c1766)
 
-### Задачи
+### Задачи.
 
-Часть 1. Настройка топологии и конфигурация основных параметров маршрутизатора и коммутатора
+Часть 1. Настройка топологии и конфигурация основных параметров маршрутизатора и коммутатора.
 
-Часть 2. Ручная настройка IPv6-адресов
+Часть 2. Ручная настройка IPv6-адресов.
 
-Часть 3. Проверка сквозного соединения
+Часть 3. Проверка сквозного соединения.
 
 ### Выполнение задания.
 
-#### Часть 1. Настройка топологии и конфигурация основных параметров маршрутизатора и коммутатора
+#### Часть 1. Настройка топологии и конфигурация основных параметров маршрутизатора и коммутатора.
 
-- Шаг 1. Настройте маршрутизатор.
+- Шаг 1. Настраиваем маршрутизатор.
 
-- Шаг 2. Настройте коммутатор.
+  
+
+- Шаг 2. Настраиваем коммутатор.
+
+  
 
 #### Часть 2. Ручная настройка IPv6-адресов.
 
-- Шаг 1. Назначьте IPv6-адреса интерфейсам Ethernet на R1.
+- Шаг 1. Назначаем IPv6-адреса интерфейсам Ethernet на R1.
 
-a. 
+a. Назнаем глобальные индивидуальные IPv6-адреса, указанные в таблице адресации обоим интерфейсам Ethernet на R1.
 
-b. 
+Для интерфейса G0/0/0.
 
-c.
+![ipv6 for R1 G000](https://github.com/Shure0407/Network_engineer/assets/162669909/4ae213f3-f290-4997-a982-11399f6542b7)
 
-d. 
+Для интерфейса G0/0/1.
 
-- Шаг 2. Активируйте IPv6-маршрутизацию на R1.
+![ipv6 for R1 G001](https://github.com/Shure0407/Network_engineer/assets/162669909/3198ef5a-63bf-4ed4-b554-53b19c81c378)
+
+b. Вводим команду show ipv6 interface brief для проверки.
+
+![show ipv6 for R1 all ](https://github.com/Shure0407/Network_engineer/assets/162669909/24c3e025-4eae-40ee-86cd-b6d79346f524)
+
+MAC адрес G0/0/0 : 0050.***0fb4.8701***  -> локальный адрес : fe80::25***0:f***ff:fe***b4:8701***
+
+MAC адрес G0/0/1 : 0050.***0fb4.8702***  -> локальный адрес : fe80::25***0:f***ff:fe***b4:8702***
+
+c. Чтобы обеспечить соответствие локальных адресов канала индивидуальному адресу, вручную вводим локальные адреса канала на каждом интерфейсе Ethernet на R1.
+
+![link local G000](https://github.com/Shure0407/Network_engineer/assets/162669909/4df034c6-b832-4783-b9e0-7812f2fbe0b8)
+
+![link local G001](https://github.com/Shure0407/Network_engineer/assets/162669909/0752cbe0-7d0e-448d-9cfc-7fa8fcac4480)
+
+d. Проверяем, что локальный адрес связи изменен на fe80::1. 
+
+![show ipv6 for R1 all2](https://github.com/Shure0407/Network_engineer/assets/162669909/69e1f674-fdbe-428e-87ab-d0c3bc1da2c7)
+
+- Шаг 2. Активируем IPv6-маршрутизацию на R1.
 
 a. В командной строке на PC-B вводим команду ipconfig, чтобы получить данные IPv6-адреса, назначенного интерфейсу ПК.
  
 На PC-B индивидуальный IPv6-адрес сетевой интерфейсной карте (NIC) ***не назначился***.
 
-![ipconfig до unicast](https://github.com/Shure0407/Network_engineer/assets/162669909/4479fb5a-9d8c-428d-a5e7-0e015bb81f81)
+![ipconfig до unicast PC B](https://github.com/Shure0407/Network_engineer/assets/162669909/fae227c0-72cd-4424-a50e-b9bb80d0a83a)
 
-b. Активируем IPv6-маршрутизацию на R1 с помощью команды IPv6 unicast-routing
+b. Активируем IPv6-маршрутизацию на R1 с помощью команды IPv6 unicast-routing.
 
 ![unicast](https://github.com/Shure0407/Network_engineer/assets/162669909/32effe70-cf95-4e49-8565-9008962fc9e7)
 
 c. Еще раз проверяем данные IPv6-адреса.
 
-Для PC-B
+Для PC-B.
 
 ![PC-B ipconfig automatic](https://github.com/Shure0407/Network_engineer/assets/162669909/6419bfe5-4d87-44ae-af06-b30044ac4a3e)
 
-Для PC-A
+Для PC-A.
 
 ![PC-A ipconfig automatic](https://github.com/Shure0407/Network_engineer/assets/162669909/3e37fd25-e27d-4ab4-89ca-c40fb1be946c)
 
 
-- Шаг 3. Назначьте IPv6-адреса интерфейсу управления (SVI) на S1.
+- Шаг 3. Назначаем IPv6-адреса интерфейсу управления (SVI) на S1.
 
-a. 
+a. Назначаем адрес IPv6 для S1. Также назначаем этому интерфейсу локальный адрес канала.
 
-b. 
+![ipv6 для S1](https://github.com/Shure0407/Network_engineer/assets/162669909/91671bc7-d5c9-4ca2-8d52-8900523015b2)
 
-- Шаг 4.Назначьте компьютерам статические IPv6-адреса.
+![link local vlan1 S1](https://github.com/Shure0407/Network_engineer/assets/162669909/0d54e4ed-9491-4462-a6c3-ac0dfbbaf438)
+
+
+b. Проверяем правильность назначения IPv6-адресов интерфейсу управления.
+
+![show ipv6 для S1 br](https://github.com/Shure0407/Network_engineer/assets/162669909/ba35354b-65b2-47fa-a7e8-55d068516f0d)
+
+
+- Шаг 4.Назначаем компьютерам статические IPv6-адреса.
 
 a. Открываем окно IP configuration для каждого ПК и назначаем адресацию IPv6.
 
 ![PC A ipv6](https://github.com/Shure0407/Network_engineer/assets/162669909/e315af42-a151-469d-b0a4-69849da777d2)
 
-![PC B ipv6](https://github.com/Shure0407/Network_engineer/assets/162669909/5b738741-cc59-4349-9e1b-bd04147336c7)
+![PC B ipv6](https://github.com/Shure0407/Network_engineer/assets/162669909/6c670a95-6c46-4ef9-8c23-400b6cad0e03)
 
-b. Проверяем адресацию.
+b. Проверяем, что оба компьютера имеют правильную информацию адреса IPv6
+
+![IP config auto PC A](https://github.com/Shure0407/Network_engineer/assets/162669909/9f4f48fb-2ce7-4ebc-b9a6-a8b1ba7c0fcd)
+
+![IP config auto PC B](https://github.com/Shure0407/Network_engineer/assets/162669909/f929cb65-803c-4e0e-9c73-e773cc1d4559)
 
 ![PC-A ipconfig](https://github.com/Shure0407/Network_engineer/assets/162669909/6f1f7b5a-c7b1-4c12-b501-17ccd7e60260)
 
 ![PC-B ipconfig](https://github.com/Shure0407/Network_engineer/assets/162669909/79ee56e3-4d77-43a9-a2ea-5894525d3e02)
 
 
-
-#### Часть 3. Проверка сквозного подключения
+#### Часть 3. Проверка сквозного подключения.
 
 a. С PC-A отправляем эхо-запрос на локальный адрес интерфейса G 0/0/1 на R1: FE80::1. 
 
