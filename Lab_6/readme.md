@@ -50,12 +50,35 @@
 
 #### Часть 2. Создание сетей VLAN и назначение портов коммутатора.
 
+- Шаг 1. Создаем сети VLAN на коммутаторах.
+
+а.Создаем и даем название необходимым VLAN на каждом коммутаторе из таблицы выше.
+
+![Vlan S1](https://github.com/Shure0407/Network_engineer/assets/162669909/1e551b60-3613-4d2a-9353-e39eb28530be)
+
+![Vlan S2](https://github.com/Shure0407/Network_engineer/assets/162669909/8020e17c-6ed8-4858-99df-51332dd0728c)
 
 
+b.Настраиваем интерфейс управления и шлюз по умолчанию на каждом коммутаторе, используя информацию об IP-адресе в таблице адресации.
+
+![Vlan S1 ip address](https://github.com/Shure0407/Network_engineer/assets/162669909/6037c211-7d6d-45c3-a264-df940fa7203a)
+
+![Vlan S2 ip address](https://github.com/Shure0407/Network_engineer/assets/162669909/503c5065-61a7-4a62-8ccb-4532a13ece2c)
 
 
+c. Назначаем все неиспользуемые порты коммутатора VLAN Parking_Lot, настраиваем их для статического режима доступа и административно деактивируем их.
 
+![Откл портов S1](https://github.com/Shure0407/Network_engineer/assets/162669909/a55f8d96-8a61-47e8-a1d0-deb48d9f300a)
 
+![Откл портов S2](https://github.com/Shure0407/Network_engineer/assets/162669909/e1af8119-6583-475c-a67a-346cb5d89856)
+
+- Шаг 2. Назнаем сети VLAN соответствующим интерфейсам коммутатора.
+
+a.Назначаем используемые порты соответствующей VLAN (указанной в таблице VLAN выше) и настраиваем их для режима статического доступа.
+
+![S2 f0-6](https://github.com/Shure0407/Network_engineer/assets/162669909/f958bdee-ed6d-4904-a33a-a7c20cc7bb30)
+
+![S2 f0-18](https://github.com/Shure0407/Network_engineer/assets/162669909/d47ef9c7-767f-400f-95f8-9a84b6c06729)
 
 
 
