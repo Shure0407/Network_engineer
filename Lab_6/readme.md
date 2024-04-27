@@ -32,14 +32,17 @@
 
 ![Сеть](https://github.com/Shure0407/Network_engineer/assets/162669909/53d79953-7688-4ac3-bfe0-5159054e60ea)
 
-- Шаг 2. Настраиваем базовые параметры для маршрутизатора.
+- Шаг 2. Настраиваем базовые параметры для маршрутизатора R1.
 
 ![R1](https://github.com/Shure0407/Network_engineer/assets/162669909/e7a054f6-2015-4d17-843c-b2abff4cf328)
 
-- Шаг 3. Настраиваем базовые параметры каждого коммутатора.
+- Шаг 3. Настраиваем базовые параметры каждого коммутаторов S1 и S2.
 
+![S1](https://github.com/Shure0407/Network_engineer/assets/162669909/32010ae3-a29f-4183-b3c5-26a59b7b2256)
 
+![S1 vty](https://github.com/Shure0407/Network_engineer/assets/162669909/003c366f-9514-4dde-b597-6f5723c7760e)
 
+![S2](https://github.com/Shure0407/Network_engineer/assets/162669909/0af2b1f6-3f53-43d3-9225-450088a41504)
 
 - Шаг 4. Настраиваем узлы PC-A, PC-B.
 
