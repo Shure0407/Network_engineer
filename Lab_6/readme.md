@@ -38,9 +38,7 @@
 
 - Шаг 3. Настраиваем базовые параметры каждого коммутаторов S1 и S2.
 
-![S1](https://github.com/Shure0407/Network_engineer/assets/162669909/32010ae3-a29f-4183-b3c5-26a59b7b2256)
-
-![S1 vty](https://github.com/Shure0407/Network_engineer/assets/162669909/003c366f-9514-4dde-b597-6f5723c7760e)
+![S1](https://github.com/Shure0407/Network_engineer/assets/162669909/f64aae40-4971-4b28-b6db-7b1a56f37778)
 
 ![S2](https://github.com/Shure0407/Network_engineer/assets/162669909/0af2b1f6-3f53-43d3-9225-450088a41504)
 
