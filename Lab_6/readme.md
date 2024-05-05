@@ -121,9 +121,13 @@ b. Проверяем, что VLAN назначены на правильные 
 
 ![g0-0-1 R1 vlan](https://github.com/Shure0407/Network_engineer/assets/162669909/1a60505c-3d5e-46ab-98c9-2dedcadb6463)
 
+![R1 g001 1000](https://github.com/Shure0407/Network_engineer/assets/162669909/1e742ea2-1b44-419a-a61e-b117caa55247)
+
 Проверяем, что вспомогательные интерфейсы работают.
 
 ![R1 g001 up](https://github.com/Shure0407/Network_engineer/assets/162669909/9c458d7c-881c-49ef-8b0e-5535129b93f3)
+
+![sh ip int br R1](https://github.com/Shure0407/Network_engineer/assets/162669909/593d4777-52d7-4c31-923b-b2593d0e6e7a)
 
 #### Часть 5. Проверка: работает ли маршрутизация между VLAN.
 
