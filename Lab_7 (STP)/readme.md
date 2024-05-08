@@ -30,14 +30,36 @@
 
 - Шаг 3. Настраиваем базовые параметры каждого коммутатора.
 
+S1:
+
+![S1](https://github.com/Shure0407/Network_engineer/assets/162669909/ca5568bc-965d-44c2-8e3a-e7981da39e1c)
+
+S2:
+
+![S2](https://github.com/Shure0407/Network_engineer/assets/162669909/a29fe79c-4482-4cf6-836f-8a4066803bde)
+
+S3:
+
+![S3](https://github.com/Shure0407/Network_engineer/assets/162669909/02ac0f0f-2a9a-48b4-972d-b8af8ffc009b)
+
+- Шаг 4. Проверяем связь.
+
+Успешно ли выполняется эхо-запрос от коммутатора S1 на коммутатор S2?
+
+![ping S1 to S2](https://github.com/Shure0407/Network_engineer/assets/162669909/e856ce06-b357-4ace-9e75-f96aea0eaac8)
+
+Успешно ли выполняется эхо-запрос от коммутатора S1 на коммутатор S3?
+
+![ping S1 to S3](https://github.com/Shure0407/Network_engineer/assets/162669909/6623b0da-2484-4cb7-8fdc-f40d33bb2b42)
+
+Успешно ли выполняется эхо-запрос от коммутатора S2 на коммутатор S3?
+
+![ping S2 to S3](https://github.com/Shure0407/Network_engineer/assets/162669909/b9116532-21a5-463a-8096-1c919c20d431)
 
 
+#### Часть 2. Определение корневого моста
 
-
-
-
-
-
+- Шаг 1. Отключаем все порты на коммутаторах.
 
 
 
