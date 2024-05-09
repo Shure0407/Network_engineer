@@ -61,9 +61,58 @@ S3:
 
 - Шаг 1. Отключаем все порты на коммутаторах.
 
+![off fa0-4 S1](https://github.com/Shure0407/Network_engineer/assets/162669909/9e634a53-224d-4daf-bba2-a0e1d39cc01f)
 
+![off fa0-4 S2](https://github.com/Shure0407/Network_engineer/assets/162669909/93dc5e9e-18ed-4f6e-b9ad-2457e8dc1275)
 
+![off fa0-4 S3](https://github.com/Shure0407/Network_engineer/assets/162669909/ecebb1f1-b80f-4271-a69b-c7373f8bde2a)
 
+- Шаг 2. Настройте подключенные порты в качестве транковых.
+
+![trunk S1](https://github.com/Shure0407/Network_engineer/assets/162669909/c098ce60-bd87-409d-bb1b-14202c9b88e3)
+
+![trunk S2](https://github.com/Shure0407/Network_engineer/assets/162669909/77ab1756-2431-4f9c-b121-33f174b82f00)
+
+![trunk S3](https://github.com/Shure0407/Network_engineer/assets/162669909/3508d173-a94b-454c-8c9c-c61794e45b17)
+
+- Шаг 3. Включаем порты F0/2 и F0/4 на всех коммутаторах.
+
+![on fa2 4 S1](https://github.com/Shure0407/Network_engineer/assets/162669909/e9844865-f764-422f-8a68-19925a57fa0d)
+
+![on fa2 4 S2](https://github.com/Shure0407/Network_engineer/assets/162669909/e47f870e-9997-47ee-b493-f6bb5c664257)
+
+![on fa2 4 S3](https://github.com/Shure0407/Network_engineer/assets/162669909/4b342948-e2b5-4b34-a5a0-151eefe59b2a)
+
+- Шаг 4. Отображаем данные протокола spanning-tree на всех коммутаторах.
+
+  Стоимость портов одинаковая, поэтому сравнение по идентификатору моста (BID)
+
+![sh span tree S1](https://github.com/Shure0407/Network_engineer/assets/162669909/547b47fc-c80e-4506-ac03-2fd762204caa)
+
+![sh span tree S2](https://github.com/Shure0407/Network_engineer/assets/162669909/12172261-219d-47a9-a01e-c45b76beb384)
+
+![sh span tree S3](https://github.com/Shure0407/Network_engineer/assets/162669909/ecd88739-6863-43c9-af20-93ca005f0e6c)
+
+- Какой коммутатор является корневым мостом?  Почему этот коммутатор был выбран протоколом spanning-tree в качестве корневого моста? 
+
+S2 является корневым мостом. S2 имеет наименьший BID (32769.000143555D17) по сравнению с S1(32769.0030A3382D15) и S3(32769.0060705D756C)
+
+- Какие порты на коммутаторе являются корневыми портами?
+
+S1 F0/2 и S3 F0/2 являются корневыми, потому что смотрят в сторону корневого моста.
+
+- Какие порты на коммутаторе являются назначенными портами?
+
+S2 F0/2, S2 F0/4 являются назначенными, потому что находятся на корневом мосте, и S1 F0/4 тоже является назначенным.
+
+- Какой порт отображается в качестве альтернативного и в настоящее время заблокирован?
+
+S3 F0/4 является альтернативным и заблокирован
+
+- Почему протокол spanning-tree выбрал этот порт в качестве невыделенного (заблокированного) порта?
+
+Протокол spanning-tree выбрал S3 F0/4 в качестве заблокированного, потому что при сравнении BID на S1 и S3, на последнем он больше
+и поэтому на S1 порт F0/4 - назначенный, а на S3 F0/4 - альтернативный (заблокированный)
 
 
 
