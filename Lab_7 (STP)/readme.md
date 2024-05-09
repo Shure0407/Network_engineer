@@ -77,9 +77,15 @@ S3:
 
 - Шаг 3. Включаем порты F0/2 и F0/4 на всех коммутаторах.
 
+S1:
+
 ![on fa2 4 S1](https://github.com/Shure0407/Network_engineer/assets/162669909/e9844865-f764-422f-8a68-19925a57fa0d)
 
+S2:
+
 ![on fa2 4 S2](https://github.com/Shure0407/Network_engineer/assets/162669909/e47f870e-9997-47ee-b493-f6bb5c664257)
+
+S3:
 
 ![on fa2 4 S3](https://github.com/Shure0407/Network_engineer/assets/162669909/4b342948-e2b5-4b34-a5a0-151eefe59b2a)
 
@@ -87,9 +93,15 @@ S3:
 
   Стоимость портов одинаковая, поэтому сравнение по идентификатору моста (BID).
 
+S1:
+
 ![sh span tree S1](https://github.com/Shure0407/Network_engineer/assets/162669909/547b47fc-c80e-4506-ac03-2fd762204caa)
 
+S2:
+
 ![sh span tree S2](https://github.com/Shure0407/Network_engineer/assets/162669909/12172261-219d-47a9-a01e-c45b76beb384)
+
+S3:
 
 ![sh span tree S3](https://github.com/Shure0407/Network_engineer/assets/162669909/ecd88739-6863-43c9-af20-93ca005f0e6c)
 
@@ -118,17 +130,21 @@ S3 F0/4 является альтернативным и заблокирова�
 
 #### Часть 3. Наблюдение за процессом выбора протоколом STP порта, исходя из стоимости портов.
 
-- Шаг 1. Определите коммутатор с заблокированным портом.
+- Шаг 1. Определяем коммутатор с заблокированным портом.
 
-  
+ Это коммутатор S3 
 
-- Шаг 2. Измените стоимость порта.
+- Шаг 2. Изменяем стоимость порта на коммутаторе S3.
 
 ![f0 2 S3 cost 18](https://github.com/Shure0407/Network_engineer/assets/162669909/f9dbfdc4-6f36-4ad9-980d-2818d259ac7a)
 
 - Шаг 3. Проверяем изменения протокола spanning-tree.
 
+S1:
+
 ![sh span tree S1 cost 18](https://github.com/Shure0407/Network_engineer/assets/162669909/41acfafe-c7fa-4358-ac00-ad4b4280b7a4)
+
+S3:
 
 ![sh span tree S3 cost 18](https://github.com/Shure0407/Network_engineer/assets/162669909/fca29985-ba82-4b20-afc7-227b7fe2e2ba)
 
@@ -140,9 +156,15 @@ S3 F0/4 является альтернативным и заблокирова�
 
 - Шаг 4. Удаляем изменения стоимости порта.
 
+S3:
+
 ![f0 2 S3  no cost 18](https://github.com/Shure0407/Network_engineer/assets/162669909/7d937e31-fbd2-4487-97c9-e405bdb5aa38)
 
+S1:
+
 ![sh span tree S1 cost 19](https://github.com/Shure0407/Network_engineer/assets/162669909/7e0c83cc-cea6-408d-90cf-cc4e64c902ff)
+
+S3:
 
 ![sh span tree S3 cost 19](https://github.com/Shure0407/Network_engineer/assets/162669909/3b7d8459-dd51-4400-80d9-76618926f238)
 
@@ -152,19 +174,38 @@ S3 F0/4 является альтернативным и заблокирова�
 
 - Шаг 1. Включаем порты F0/1 и F0/3 на всех коммутаторах.
 
+S1:
+
 ![on fa1 3 S1](https://github.com/Shure0407/Network_engineer/assets/162669909/a2e5ef42-3637-4fe5-b2f0-cf7b092a3285)
 
+S2:
+
 ![on fa1 3 S2](https://github.com/Shure0407/Network_engineer/assets/162669909/53bc2212-6f06-4348-a0de-6f2185f918c1)
+
+S3:
 
 ![on fa1 3 S3](https://github.com/Shure0407/Network_engineer/assets/162669909/bdee23d0-0002-474e-af28-54086d7c0f9e)
 
 - Шаг 2. Проверяем изменения протокола spanning-tree.
 
+S1:
+
 ![sh span tree S1 part 4](https://github.com/Shure0407/Network_engineer/assets/162669909/316e3758-2e74-4f68-a501-a3a702de6b71)
+
+S2:
 
 ![sh span tree S2 part 4](https://github.com/Shure0407/Network_engineer/assets/162669909/ead0a7ec-a81a-433d-9cf6-25bfe5b4183f)
 
+S3:
+
 ![sh span tree S3 part 4](https://github.com/Shure0407/Network_engineer/assets/162669909/70bd5a95-acc3-4e98-8712-5b2ae26b05ea)
 
+![Сеть часть 4](https://github.com/Shure0407/Network_engineer/assets/162669909/588aa219-f927-42a3-bac1-d6e80235ef68)
+
+- Какой порт выбран протоколом STP в качестве порта корневого моста на каждом коммутаторе некорневого моста?
+
+  
+
+- Почему протокол STP выбрал эти порты в качестве портов корневого моста на этих коммутаторах?
 
 
