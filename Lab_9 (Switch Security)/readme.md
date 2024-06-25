@@ -192,7 +192,15 @@ S2:
 
  Проверка DHCP Snooping на S2. 
 
- 
+ ![S2 show dhcp snooping](https://github.com/Shure0407/Network_engineer/assets/162669909/827915a3-8c5d-455a-b359-e7205fa4a318)
+
+В командной строке на PC-B освободите, а затем обновите IP-адрес.
+
+![PC-B ipconfig](https://github.com/Shure0407/Network_engineer/assets/162669909/7517fd3f-8e75-458f-8e05-f97042c8c2ae)
+
+Проверьте привязку отслеживания DHCP с помощью команды show ip dhcp snooping binding.
+
+![S2 show dhcp snooping binding](https://github.com/Shure0407/Network_engineer/assets/162669909/67039af7-323f-41f9-b73e-099882164b1e)
 
 - Шаг 6. Реализация PortFast и BPDU Guard.
 
