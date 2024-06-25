@@ -59,13 +59,23 @@
 
 #### Часть 2. Настройка сетей VLAN на коммутаторах.
 
-- Шаг 1. Сконфигруриуйте VLAN 10.
+- Шаг 1. Сконфигруриуйте VLAN 10. Сконфигруриуйте SVI для VLAN 10. Настройте VLAN 333 с именем Native на S1 и S2. Настройте VLAN 999 с именем ParkingLot на S1 и S2.
 
-- Шаг 2. Сконфигруриуйте SVI для VLAN 10.
+S1
 
-- Шаг 3. Настройте VLAN 333 с именем Native на S1 и S2.
+![S1 Vlan](https://github.com/Shure0407/Network_engineer/assets/162669909/1e21dc7d-4e1c-4f7d-994f-83e7af580ce1)
 
-- Шаг 4. Настройте VLAN 999 с именем ParkingLot на S1 и S2.
+![S1 manag descr](https://github.com/Shure0407/Network_engineer/assets/162669909/de4cd0da-2d1b-43fa-b6bb-37dee288c216)
+
+![S1 Vlan 999 int shut](https://github.com/Shure0407/Network_engineer/assets/162669909/0a563ae0-667b-4045-a0b5-5c27bfdf6d2d)
+
+S2
+
+![S2 Vlan](https://github.com/Shure0407/Network_engineer/assets/162669909/2179c597-2221-47ee-928e-c2955508bab1)
+
+![S2 manag descr](https://github.com/Shure0407/Network_engineer/assets/162669909/18edc473-c3a3-4389-a631-ac85ad92e126)
+
+![S2 Vlan 999 int shut](https://github.com/Shure0407/Network_engineer/assets/162669909/0f1e8f46-ebec-434b-9d37-58a2fe267f3a)
 
 #### Часть 3. Настройки безопасности коммутатора.
 
