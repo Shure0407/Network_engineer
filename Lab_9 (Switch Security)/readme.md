@@ -26,31 +26,31 @@
 
 ![Сеть](https://github.com/Shure0407/Network_engineer/assets/162669909/334a80c6-bdef-4d57-bef1-1f4435cafea2)
 
-- Шаг 2. Настройте маршрутизатор R1.
+- Шаг 2. Настраиваем маршрутизатор R1.
 
 ![R1 conf](https://github.com/Shure0407/Network_engineer/assets/162669909/7c308c64-7fa9-4c87-b66f-01d68361074c)
 
 ![R1 sh ip int br](https://github.com/Shure0407/Network_engineer/assets/162669909/e9acc010-f7d3-4438-9463-65e35c99765a)
 
-- Шаг 3. Настройка и проверка основных параметров коммутатора.
+- Шаг 3. Настраиваем и проверяем основные параметры коммутаторов.
 
-Настройка коммутатора S1
+Настройка коммутатора S1:
 
 ![S1 conf](https://github.com/Shure0407/Network_engineer/assets/162669909/32453037-3df6-496d-975d-150f586495d2)
 
-Описание интерфейсов S1
+Описание интерфейсов S1:
 
 ![S1 int descript](https://github.com/Shure0407/Network_engineer/assets/162669909/d5c7c7c0-08ad-40b3-bb6c-06789644dc56)
 
-Настройка коммутатора S2
+Настройка коммутатора S2:
 
 ![S2 conf](https://github.com/Shure0407/Network_engineer/assets/162669909/5c58099e-f427-48d7-a278-13ebde8e0d64)
 
-Описание интерфейсов S2
+Описание интерфейсов S2:
 
 ![S2 int descript](https://github.com/Shure0407/Network_engineer/assets/162669909/b9de4c59-6d47-42de-bbfc-8c7581edf1d8)
 
-Настройка default gateway для S1 и S2
+Настройка default gateway для S1 и S2:
 
 ![S1 def-gateway](https://github.com/Shure0407/Network_engineer/assets/162669909/9c023b3f-9975-4cd6-bfc5-df8efa93d8a1)
 
@@ -61,7 +61,7 @@
 
 Сконфигруриуйте VLAN 10. Сконфигруриуйте SVI для VLAN 10. Настройте VLAN 333 с именем Native на S1 и S2. Настройте VLAN 999 с именем ParkingLot на S1 и S2.
 
-S1
+S1:
 
 ![S1 Vlan](https://github.com/Shure0407/Network_engineer/assets/162669909/1e21dc7d-4e1c-4f7d-994f-83e7af580ce1)
 
@@ -69,9 +69,9 @@ S1
 
 ![S1 Vlan 999 int shut](https://github.com/Shure0407/Network_engineer/assets/162669909/0a563ae0-667b-4045-a0b5-5c27bfdf6d2d)
 
-S2
+S2:
 
-![S2 Vlan](https://github.com/Shure0407/Network_engineer/assets/162669909/2179c597-2221-47ee-928e-c2955508bab1)
+![S2 Vlan](https://github.com/Shure0407/Network_engineer/assets/162669909/bc4c01fc-80ef-407e-bb10-57bf1794e55d)
 
 ![S2 manag descr](https://github.com/Shure0407/Network_engineer/assets/162669909/18edc473-c3a3-4389-a631-ac85ad92e126)
 
@@ -81,8 +81,8 @@ S2
 
 - Шаг 1. Релизация магистральных соединений 802.1Q.
 
-Настройте все магистральные порты Fa0/1 на обоих коммутаторах для использования VLAN 333 в качестве native VLAN.
-Убедитесь, что режим транкинга успешно настроен на всех коммутаторах.
+Настраиваем все магистральные порты Fa0/1 на обоих коммутаторах для использования VLAN 333 в качестве native VLAN.
+Убеждаемся, что режим транкинга успешно настроен на всех коммутаторах.
 
 S1:
 
@@ -94,7 +94,8 @@ S2:
 
 ![S2 int f01](https://github.com/Shure0407/Network_engineer/assets/162669909/d833357b-4d67-42b9-98a5-429cffdc0fbd)
 
-Отключить согласование DTP F0/1 на S1 и S2. Проверьте с помощью команды show interfaces.
+Отключаем согласование DTP F0/1 на S1 и S2. Проверяем с помощью команды show interfaces.
+
 S1:
 
 ![S1 f01 negotiation](https://github.com/Shure0407/Network_engineer/assets/162669909/1b70bfce-3189-4c99-8d6c-41828c23efce)
@@ -107,19 +108,19 @@ S2:
 
 - Шаг 2. Настройка портов доступа.
 
-На S1 настройте F0/5 и F0/6 в качестве портов доступа и свяжите их с VLAN 10.
+На S1 настраиваем F0/5 и F0/6 в качестве портов доступа и связываем их с VLAN 10.
 
 ![S1 f05](https://github.com/Shure0407/Network_engineer/assets/162669909/24a88212-4acb-4509-9e3d-288b376e33ce)
 
 ![S1 f06](https://github.com/Shure0407/Network_engineer/assets/162669909/d97ed44d-2ea2-4c5b-a4f7-f0b6e99c11c9)
 
-На S2 настройте порт доступа Fa0/18 и свяжите его с VLAN 10.
+На S2 настраиваем порт доступа Fa0/18 и связываем его с VLAN 10.
 
 ![S2 f018](https://github.com/Shure0407/Network_engineer/assets/162669909/605f4026-1678-4426-8d65-4396325fd1a6)
 
 - Шаг 3. Безопасность неиспользуемых портов коммутатора.
 
-На S1 и S2 переместите неиспользуемые порты из VLAN 1 в VLAN 999 и отключите неиспользуемые порты.
+На S1 и S2 перемещаем неиспользуемые порты из VLAN 1 в VLAN 999 и отключаем неиспользуемые порты.
 
 Частично отключил в Части 2.
 
@@ -131,7 +132,7 @@ S2:
 
 ![S2 Vlan 999 int shut 2](https://github.com/Shure0407/Network_engineer/assets/162669909/0c0822f1-fd5b-463e-b806-1a75831dea6a)
 
-Убедитесь, что неиспользуемые порты отключены и связаны с VLAN  999, введя команду  show.
+Убеждаемся, что неиспользуемые порты отключены и связаны с VLAN  999, введя команду  show.
 
 S1:
 
@@ -147,20 +148,51 @@ S2:
 
 - Шаг 4. Документирование и реализация функций безопасности порта.
 
-  На S1, введите команду show port-security interface f0/6  для отображения настроек по умолчанию безопасности порта для интерфейса F0/6.
+На S1, вводим команду show port-security interface f0/6  для отображения настроек по умолчанию безопасности порта для интерфейса F0/6.
 
   ![S1 f06  sh port secure before](https://github.com/Shure0407/Network_engineer/assets/162669909/1882abdc-fc3b-4f0d-b2de-bb6279b8e3ee)
 
-На S1 включите защиту порта на F0 / 6 :
+На S1 включаем защиту порта на F0 / 6 :
 
 ![S1 f06 port secure](https://github.com/Shure0407/Network_engineer/assets/162669909/d8d4291e-f500-4323-9e44-1cfeb5133e73)
 
-Verify port security on S1 F0/6.
+Проверка функции безопасности портов на S1 F0/6.
 
 ![S1 f06  sh port secure after](https://github.com/Shure0407/Network_engineer/assets/162669909/959303a2-5c1b-481c-86df-07e7ac8b8486)
 
+![S1 f06  sh port secure address](https://github.com/Shure0407/Network_engineer/assets/162669909/2aee9162-6628-41f0-9507-22bba6f1ccf1)
+
+Включаем безопасность порта для F0 / 18 на S2. Настраиваем каждый активный порт доступа таким образом, чтобы он автоматически добавлял адреса МАС, изученные на этом порту, в текущую конфигурацию.
+
+![S2 f018  sh port secure before](https://github.com/Shure0407/Network_engineer/assets/162669909/94ec92f3-b3e6-41b4-92a0-73d6ca03c064)
+
+Настройте следующие параметры безопасности порта на S2 F / 18
+
+![S2 f018 port secure](https://github.com/Shure0407/Network_engineer/assets/162669909/9de2395b-23c5-4192-a366-6804b44eb1ec)
+
+Проверка функции безопасности портов на S2 F0/18.
+
+![S2 f018  sh port secure after](https://github.com/Shure0407/Network_engineer/assets/162669909/8bf48be1-721d-4154-b390-6b91bfe32034)
+
+![S2 f018  sh port secure address](https://github.com/Shure0407/Network_engineer/assets/162669909/de83eb0f-07c3-4c3b-895c-edd15969ff3d)
 
 - Шаг 5. Реализовать безопасность DHCP snooping.
+
+  На S2 включите DHCP snooping и настройте DHCP snooping во VLAN 10.
+
+![S2 dhcp snooping](https://github.com/Shure0407/Network_engineer/assets/162669909/588f0ad9-3783-4b73-b89e-5f468a356041)
+
+  Настройте магистральные порты на S2 как доверенные порты.
+
+![S2 dhcp snooping f01](https://github.com/Shure0407/Network_engineer/assets/162669909/50a87ee3-52bb-4a0b-ada2-edb1cf030df2)
+  
+  Ограничьте ненадежный порт Fa0/18 на S2 пятью DHCP-пакетами в секунду.
+
+![S2 dhcp snooping rate](https://github.com/Shure0407/Network_engineer/assets/162669909/007b3500-96d7-4e47-9181-1f3bc15cde70)
+
+ Проверка DHCP Snooping на S2. 
+
+ 
 
 - Шаг 6. Реализация PortFast и BPDU Guard.
 
