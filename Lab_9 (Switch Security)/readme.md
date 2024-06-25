@@ -204,4 +204,22 @@ S2:
 
 - Шаг 6. Реализация PortFast и BPDU Guard.
 
+Настройте PortFast на всех портах доступа, которые используются на обоих коммутаторах
+Включите защиту BPDU на портах доступа VLAN 10 S1 и S2, подключенных к PC-A и PC-B
+Убедитесь, что защита BPDU и PortFast включены на соответствующих портах.
+
+S1:
+
+![S1 portfast](https://github.com/Shure0407/Network_engineer/assets/162669909/a3db0e2a-9b21-4f70-97b4-a6a0337158ef)
+
+S2:
+
+![S2 portfast](https://github.com/Shure0407/Network_engineer/assets/162669909/726b77b3-93b9-4dbd-9286-b12ca40fc8c0)
+
 - Шаг 7. Проверьте наличие сквозного ⁪подключения.
+
+![Ping PC-A](https://github.com/Shure0407/Network_engineer/assets/162669909/b41e65aa-3b03-485f-b1ab-29a85e26bbc0)
+
+![Ping PC-B](https://github.com/Shure0407/Network_engineer/assets/162669909/48949422-e9a9-45cf-9766-4406579e6e9b)
+
+![Ping R1](https://github.com/Shure0407/Network_engineer/assets/162669909/36501ae1-de38-4b43-adc2-475449299cf8)
