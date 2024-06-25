@@ -40,7 +40,7 @@
 
 Описание интерфейсов S1
 
-![S1 int descript](https://github.com/Shure0407/Network_engineer/assets/162669909/5e871015-d9b5-4de8-8051-9b0faddf4410)
+![S1 int descript](https://github.com/Shure0407/Network_engineer/assets/162669909/d5c7c7c0-08ad-40b3-bb6c-06789644dc56)
 
 Настройка коммутатора S2
 
@@ -48,7 +48,7 @@
 
 Описание интерфейсов S2
 
-![S2 int descript](https://github.com/Shure0407/Network_engineer/assets/162669909/085449c9-e137-442e-95b2-72b39a4699c1)
+![S2 int descript](https://github.com/Shure0407/Network_engineer/assets/162669909/b9de4c59-6d47-42de-bbfc-8c7581edf1d8)
 
 Настройка default gateway для S1 и S2
 
