@@ -107,7 +107,43 @@ S2:
 
 - Шаг 2. Настройка портов доступа.
 
+На S1 настройте F0/5 и F0/6 в качестве портов доступа и свяжите их с VLAN 10.
+
+![S1 f05](https://github.com/Shure0407/Network_engineer/assets/162669909/24a88212-4acb-4509-9e3d-288b376e33ce)
+
+![S1 f06](https://github.com/Shure0407/Network_engineer/assets/162669909/d97ed44d-2ea2-4c5b-a4f7-f0b6e99c11c9)
+
+На S2 настройте порт доступа Fa0/18 и свяжите его с VLAN 10.
+
+![S2 f018](https://github.com/Shure0407/Network_engineer/assets/162669909/605f4026-1678-4426-8d65-4396325fd1a6)
+
 - Шаг 3. Безопасность неиспользуемых портов коммутатора.
+
+На S1 и S2 переместите неиспользуемые порты из VLAN 1 в VLAN 999 и отключите неиспользуемые порты.
+
+Частично отключил в Части 2.
+
+S1:
+
+![S1 Vlan 999 int shut 2](https://github.com/Shure0407/Network_engineer/assets/162669909/5986f9e9-0ec6-4dea-b156-8c362777e87a)
+
+S2:
+
+![S2 Vlan 999 int shut 2](https://github.com/Shure0407/Network_engineer/assets/162669909/0c0822f1-fd5b-463e-b806-1a75831dea6a)
+
+Убедитесь, что неиспользуемые порты отключены и связаны с VLAN  999, введя команду  show.
+
+S1:
+
+![S1 sh int status](https://github.com/Shure0407/Network_engineer/assets/162669909/e22bce6c-0964-4723-8b5e-7d58a6394cd2)
+
+![S1 sh int trunk sh vlan](https://github.com/Shure0407/Network_engineer/assets/162669909/2c506e7e-fd0a-4798-8bd7-df4c02fac0ca)
+
+S2:
+
+![S2 sh int status](https://github.com/Shure0407/Network_engineer/assets/162669909/3e278759-3984-43da-894d-f4b8794f5c4c)
+
+![S2 sh int trunk sh vlan](https://github.com/Shure0407/Network_engineer/assets/162669909/4b844163-0144-4724-a8b8-89ed465d296b)
 
 - Шаг 4. Документирование и реализация функций безопасности порта.
 
