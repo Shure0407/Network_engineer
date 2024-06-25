@@ -147,6 +147,19 @@ S2:
 
 - Шаг 4. Документирование и реализация функций безопасности порта.
 
+  На S1, введите команду show port-security interface f0/6  для отображения настроек по умолчанию безопасности порта для интерфейса F0/6.
+
+  ![S1 f06  sh port secure before](https://github.com/Shure0407/Network_engineer/assets/162669909/1882abdc-fc3b-4f0d-b2de-bb6279b8e3ee)
+
+На S1 включите защиту порта на F0 / 6 :
+
+![S1 f06 port secure](https://github.com/Shure0407/Network_engineer/assets/162669909/d8d4291e-f500-4323-9e44-1cfeb5133e73)
+
+Verify port security on S1 F0/6.
+
+![S1 f06  sh port secure after](https://github.com/Shure0407/Network_engineer/assets/162669909/959303a2-5c1b-481c-86df-07e7ac8b8486)
+
+
 - Шаг 5. Реализовать безопасность DHCP snooping.
 
 - Шаг 6. Реализация PortFast и BPDU Guard.
