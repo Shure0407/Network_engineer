@@ -82,14 +82,28 @@ S2
 - Шаг 1. Релизация магистральных соединений 802.1Q.
 
 Настройте все магистральные порты Fa0/1 на обоих коммутаторах для использования VLAN 333 в качестве native VLAN.
+Убедитесь, что режим транкинга успешно настроен на всех коммутаторах.
 
 S1:
 
 ![S1 int f01](https://github.com/Shure0407/Network_engineer/assets/162669909/277e043b-c137-4924-a0c7-77f97dbe9f02)
 
-Убедитесь, что режим транкинга успешно настроен на всех коммутаторах.
+![S1 sh int trunk](https://github.com/Shure0407/Network_engineer/assets/162669909/fd7e8eb0-caa0-4b53-8115-bd087df1729d)
 
-S1
+S2:
+
+![S2 int f01](https://github.com/Shure0407/Network_engineer/assets/162669909/d833357b-4d67-42b9-98a5-429cffdc0fbd)
+
+Отключить согласование DTP F0/1 на S1 и S2. Проверьте с помощью команды show interfaces.
+S1:
+
+![S1 f01 negotiation](https://github.com/Shure0407/Network_engineer/assets/162669909/1b70bfce-3189-4c99-8d6c-41828c23efce)
+
+![S1 f01 show negotiation](https://github.com/Shure0407/Network_engineer/assets/162669909/36c98b2e-76ec-47f6-bd33-948ce2cfe4e3)
+
+S2:
+
+![S2 f01 negotiation](https://github.com/Shure0407/Network_engineer/assets/162669909/dc9d09e1-4e1b-4afe-83de-4d32c428a611)
 
 - Шаг 2. Настройка портов доступа.
 
