@@ -24,11 +24,37 @@
 
 - Шаг 1. Создаем сеть.
 
+![Сеть](https://github.com/Shure0407/Network_engineer/assets/162669909/334a80c6-bdef-4d57-bef1-1f4435cafea2)
 
 - Шаг 2. Настройте маршрутизатор R1.
 
+![R1 conf](https://github.com/Shure0407/Network_engineer/assets/162669909/7c308c64-7fa9-4c87-b66f-01d68361074c)
+
+![R1 sh ip int br](https://github.com/Shure0407/Network_engineer/assets/162669909/e9acc010-f7d3-4438-9463-65e35c99765a)
 
 - Шаг 3. Настройка и проверка основных параметров коммутатора.
+
+Настройка коммутатора S1
+
+![S1 conf](https://github.com/Shure0407/Network_engineer/assets/162669909/32453037-3df6-496d-975d-150f586495d2)
+
+Описание интерфейсов S1
+
+![S1 int descript](https://github.com/Shure0407/Network_engineer/assets/162669909/5e871015-d9b5-4de8-8051-9b0faddf4410)
+
+Настройка коммутатора S2
+
+![S2 conf](https://github.com/Shure0407/Network_engineer/assets/162669909/5c58099e-f427-48d7-a278-13ebde8e0d64)
+
+Описание интерфейсов S2
+
+![S2 int descript](https://github.com/Shure0407/Network_engineer/assets/162669909/085449c9-e137-442e-95b2-72b39a4699c1)
+
+Настройка default gateway для S1 и S2
+
+![S1 def-gateway](https://github.com/Shure0407/Network_engineer/assets/162669909/9c023b3f-9975-4cd6-bfc5-df8efa93d8a1)
+
+![S2 def-gateway](https://github.com/Shure0407/Network_engineer/assets/162669909/652515ab-91fe-4fe1-a465-cd339a629c09)
 
 
 #### Часть 2. Настройка сетей VLAN на коммутаторах.
