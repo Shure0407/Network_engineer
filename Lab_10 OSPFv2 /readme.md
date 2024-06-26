@@ -26,10 +26,23 @@
 
 - Шаг 2. Произведите базовую настройку маршрутизаторов.
 
+R1:
 
+![R1 conf](https://github.com/Shure0407/Network_engineer/assets/162669909/29683091-0a05-4eb3-84a1-5b7f929920b5)
+
+R2:
+
+![R2 conf](https://github.com/Shure0407/Network_engineer/assets/162669909/d6b4e517-163f-439c-b8df-fa38167cb34a)
 
 - Шаг 3. Настройте базовые параметры каждого коммутатора.
 
+S1:
+
+![S1 conf](https://github.com/Shure0407/Network_engineer/assets/162669909/2c164633-47fd-4477-ac0a-82c48eddc324)
+
+S2:
+
+![S2 conf](https://github.com/Shure0407/Network_engineer/assets/162669909/b77e7e19-846f-4b77-b7dc-c3a381272ba4)
 
 #### Часть 2. Настройка и проверка базовой работы протокола OSPFv2 для одной области
 
