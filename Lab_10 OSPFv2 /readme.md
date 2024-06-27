@@ -58,6 +58,25 @@ R2:
 
 ![R2 interface](https://github.com/Shure0407/Network_engineer/assets/162669909/289d6c01-46f9-4baa-b0a9-16c09869c1a1)
 
+Перейдите в режим конфигурации маршрутизатора OSPF, используя идентификатор процесса 56.
+Настройте статический идентификатор маршрутизатора для каждого маршрутизатора (1.1.1.1 для R1, 2.2.2.2 для R2).
+Настройте инструкцию сети для сети между R1 и R2, поместив ее в область 0
+Только на R2 добавьте конфигурацию, необходимую для объявления сети Loopback 1 в область OSPF 0.
+
+![R1 ospf](https://github.com/Shure0407/Network_engineer/assets/162669909/227879df-bb02-47b0-badb-3a4768f0be4d)
+
+![R2 ospf](https://github.com/Shure0407/Network_engineer/assets/162669909/8f91d2c3-d47c-4022-b22e-38a95ebd9d4a)
+
+Убедитесь, что OSPFv2 работает между маршрутизаторами. Выполните команду, чтобы убедиться, что R1 и R2 сформировали смежность.
+
+![R1 sh ospf neighbor](https://github.com/Shure0407/Network_engineer/assets/162669909/6b1c08bc-a9fe-4977-9c71-e1b6458d6d5f)
+
+![R2 sh ospf neighbor](https://github.com/Shure0407/Network_engineer/assets/162669909/98ffda37-fede-467e-896f-b5fd016f802f)
+
+На R1 выполните команду show ip route ospf, чтобы убедиться, что сеть R2 Loopback1 присутствует в таблице маршрутизации.
+
+![R1 sh ospf](https://github.com/Shure0407/Network_engineer/assets/162669909/4e7bcd0a-1b28-4853-bf34-8d414535dbf5)
+
 
 #### Часть 3. Оптимизация и проверка конфигурации OSPFv2 для одной области
 
