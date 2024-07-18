@@ -272,6 +272,9 @@ d. Сохраняем текущую конфигурацию в файл заг
 
 ![S1 f05 trunk](https://github.com/user-attachments/assets/63aaad18-a61b-49d2-964c-fc766eba5e7a)
 
+![S1 sh vlan](https://github.com/user-attachments/assets/f5c65c0f-36ea-419e-a41a-ffedd36bac2e)
+
+![S2 sh vlan](https://github.com/user-attachments/assets/fbe526f6-b4ad-4a98-961f-fb727ffcfaf7)
 
 #### Часть 2.	Настройка и проверка двух серверов DHCPv4 на R1.
 
@@ -304,14 +307,26 @@ g. Затем настраиваем второй пул DHCPv4, использ�
 
 - Шаг 4.	Попытка получить IP-адрес от DHCP на PC-A
 
+![PC-A IP dhcp](https://github.com/user-attachments/assets/9f6c765d-a996-4c2c-9e0a-5ce1606a54a1)
+
+![PC-A ipconfig](https://github.com/user-attachments/assets/9f7a1130-906b-44f9-9ed1-ef67659b9edb)
+
+Проверяем подключение с помощью пинга IP-адреса интерфейса R1 G0/0/1.
+
+![PC-A ping](https://github.com/user-attachments/assets/d050377a-3624-43c3-a948-93690f0b6c45)
+
 
 #### Часть 3.	Настройка и проверка DHCP-ретрансляции на R2.
 
-- Шаг 1.	Настройка R2 в качестве агента DHCP-ретрансляции для локальной сети на G0/0/1.
+- Шаг 1.	Настраиваем R2 с пулом DHCPv4
+
+![R2 dhcp](https://github.com/user-attachments/assets/94b8cc26-3a9f-4019-a48c-26965f326bcd)
 
 - Шаг 2.	Попытка получить IP-адрес от DHCP на PC-B
 
+![PC-B IP dhcp](https://github.com/user-attachments/assets/d698d7bf-7886-44a9-ac55-63bbf5dcb62a)
 
+![R2 dhcp binding   pool](https://github.com/user-attachments/assets/290a2aee-8ef9-423d-9b18-ea182cc25939)
 
 
 
