@@ -8,11 +8,11 @@
 
 ![Address table](https://github.com/user-attachments/assets/f4976d9f-61ca-4758-93a7-f0a49e25ce55)
 
-### Таблица VLAN
+### Таблица VLAN.
 
 ![VLAN table](https://github.com/user-attachments/assets/1edc3539-9e8b-4d51-b467-b5c690a0ca1b)
 
-## Задачи
+## Задачи.
 
 Часть 1. Создание сети и настройка основных параметров устройства.
 
@@ -24,23 +24,87 @@
 
 - Шаг 1. Создаем сеть согласно топологии.
 
+![Net 11](https://github.com/user-attachments/assets/31712eb7-bd5e-4cd4-889e-733eac1c825a)
 
+- Шаг 2. Произведим базовую настройку маршрутизаторов.
 
-- Шаг 2. Произведите базовую настройку маршрутизаторов.
+R1:
 
+![R1](https://github.com/user-attachments/assets/097c1d8d-27b6-4dbf-a277-43e16b5ea354)
 
+R2:
+
+![R2](https://github.com/user-attachments/assets/2c6d2e13-5354-4977-9014-9ca1451a9105)
 
 - Шаг 3. Настраиваем базовые параметры каждого коммутатора.
 
+S1:
+
+![S1](https://github.com/user-attachments/assets/07e83ece-64f1-4410-bad7-d5c7dafc04dc)
+
+S2:
+
+![S2](https://github.com/user-attachments/assets/8f9da6bc-6712-4c78-86db-aec0d1b929c4)
 
 #### Часть 2. Настройка сетей VLAN на коммутаторах.
 
-- Шаг 1. Создайте сети VLAN на коммутаторах.
+- Шаг 1. Создаем сети VLAN на коммутаторах.
 
+a.	Создаем необходимые VLAN и называем их на каждом коммутаторе из приведенной выше таблицы.
 
+S1:
 
-- Шаг 2. Назначьте сети VLAN соответствующим интерфейсам коммутатора.
+![S1 make VLAN](https://github.com/user-attachments/assets/d0efb776-5972-4e24-a0f6-673c940f6c2d)
 
+S2:
+
+![S2 make VLAN](https://github.com/user-attachments/assets/1440c29d-cd41-4a62-94ad-faff8b9550be)
+
+b.	Настраиваем интерфейс управления и шлюз по умолчанию на каждом коммутаторе, используя информацию об IP-адресе в таблице адресации. 
+
+S1:
+
+![S1 int vlan 20](https://github.com/user-attachments/assets/d18af9df-d8e9-4add-8d56-4a493a6e5988)
+
+S2:
+
+![S2 int vlan 20](https://github.com/user-attachments/assets/4729b97c-84f3-406a-ba08-04e4defa5f76)
+
+c.	Назначаем все неиспользуемые порты коммутатора VLAN Parking Lot, настраиваем их для статического режима доступа и административно деактивируем их.
+
+S1:
+
+![S1 vlan 999 1](https://github.com/user-attachments/assets/0fbfbd09-7420-4ff3-9fbc-24fc27e36dbc)
+![S1 vlan 999 2](https://github.com/user-attachments/assets/50509d75-83e3-4806-b9d6-2dc83f2a3842)
+
+S2:
+
+![S2 vlan 999 1](https://github.com/user-attachments/assets/fcbd71bb-1d79-443c-ad71-030203eeaf37)
+![S2 vlan 999 2](https://github.com/user-attachments/assets/38c2c075-5769-4368-a40c-a8d647bba289)
+
+- Шаг 2. Назначаем сети VLAN соответствующим интерфейсам коммутатора.
+
+a.	Назначаем используемые порты соответствующей VLAN (указанной в таблице VLAN выше) и настраиваем их для режима статического доступа.
+
+S1:
+
+![S1 int f06](https://github.com/user-attachments/assets/bc1206d1-e3a3-485a-8d19-b3394ba048b6)
+
+S2:
+
+![S2 int f05](https://github.com/user-attachments/assets/c7df3f90-4327-430c-b705-e5f06282e904)
+
+![S2 int f018](https://github.com/user-attachments/assets/99db061e-23b3-4e36-8d4c-25a02f1b4012)
+
+b.	Выполняем команду ***show vlan brief***, чтобы убедиться, что сети VLAN назначены правильным интерфейсам
+
+S1:
+
+![S1 sh vlan br](https://github.com/user-attachments/assets/fef6775a-962a-4c5b-a486-1032ff9d2643)
+
+S2:
+
+![S2 sh vlan br](https://github.com/user-attachments/assets/69f65c10-4aaf-4ab0-975e-af95317f659d)
 
 #### Часть 3. Настройте транки (магистральные каналы).
 
