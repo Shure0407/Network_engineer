@@ -175,34 +175,83 @@ d.	С помощью команды ***show ip interface brief*** проверь
   
 - Шаг 2. Настройка интерфейса R2 g0/0/1 с использованием адреса из таблицы и маршрута по умолчанию с адресом следующего перехода 10.20.0.1
 
+![R2 int g001](https://github.com/user-attachments/assets/7dd7a61f-49d9-423f-b212-4a5936098418)
 
 #### Часть 5. Настройте удаленный доступ.
 
 - Шаг 1. Настройте все сетевые устройства для базовой поддержки SSH.
+
 a.	Создаем локального пользователя с именем пользователя SSHadmin и зашифрованным паролем $cisco123!
 
 b.	Используем ccna-lab.com в качестве доменного имени.
+
 c.	Генерируем криптоключи с помощью 1024 битного модуля.
+
 d.	Настраиваем первые пять линий VTY на каждом устройстве, чтобы поддерживать только SSH-соединения и с локальной аутентификацией.
 
+R1:
 
+![R1 ssh](https://github.com/user-attachments/assets/480c5538-8dca-48b1-8060-b0a191de8f05)
 
+R2:
+
+![R2 ssh](https://github.com/user-attachments/assets/21c0c028-e560-47fd-94a2-1d3610ad7715)
+
+S1:
+
+![S1 ssh](https://github.com/user-attachments/assets/f3d83d28-a3bf-4ca2-a679-b921cd597d99)
+
+S2:
+
+![S2 ssh](https://github.com/user-attachments/assets/65880cd2-9143-40fb-a850-499a0c1eb4a2)
 
 - Шаг 2. Включите защищенные веб-службы с проверкой подлинности на R1.
+
 a.	Включаем сервер HTTPS на R1.
 R1(config)# ip http secure-server
 
 b.	Настраиваем R1 для проверки подлинности пользователей, пытающихся подключиться к веб-серверу.
 R1(config)# ip http authentication local
 
+В CPT данные команды не работают
 
 
 #### Часть 6. Проверка подключения.
 
 - Шаг 1. Настройте узлы ПК.
 
+PC-A:
+
+![PCA ip](https://github.com/user-attachments/assets/b8467647-61bb-4d57-8fd3-fd3167bf474b)
+
+PC-B:
+
+![PCB ip](https://github.com/user-attachments/assets/8dc793ae-b1a8-46a0-b90a-562594577c7f)
+
+
 - Шаг 2. Выполните следующие тесты. Эхозапрос должен пройти успешно.
 
+![Таблица тестов](https://github.com/user-attachments/assets/8fa7a228-807d-4fd4-8499-5f295004c909)
+
+ping PC-A to PC-B, R1:
+
+![ping PCA to PCB R1](https://github.com/user-attachments/assets/3c9471cf-95de-471c-bb39-c21e7d35acbb)
+
+ping PC-B to PC-A, R1:
+
+![ping PCB to PCA R1](https://github.com/user-attachments/assets/dacbbcc8-c4c2-4439-90e9-02183ffb788a)
+
+SSH PC-A to R1,R2,S1,S2:
+
+![SSH PCA to R1](https://github.com/user-attachments/assets/f0bed4cf-4d2e-40cf-b190-b4553645e5e0)
+
+![SSH PCA to R1 to R2 to S1 to S2](https://github.com/user-attachments/assets/32223564-2dd6-4e22-9cdd-6054a64f5f66)
+
+SSH PC-B to R1
+
+![SSH PCB to R1](https://github.com/user-attachments/assets/f3b3b81e-9de4-4f6b-8fbb-1d2fac5c15ec)
+
+![SSH PCB to R1 to R1 loop](https://github.com/user-attachments/assets/4550cc31-5180-409b-a6db-e18b3892cde6)
 
 #### Часть 7. Настройка и проверка списков контроля доступа (ACL).
 
