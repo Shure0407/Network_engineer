@@ -213,7 +213,7 @@ R1(config)# ip http secure-server
 b.	Настраиваем R1 для проверки подлинности пользователей, пытающихся подключиться к веб-серверу.
 R1(config)# ip http authentication local
 
-В CPT данные команды не работают
+**В CPT данные команды не работают**
 
 
 #### Часть 6. Проверка подключения.
@@ -307,11 +307,19 @@ PC-B:
 
 - Политика3. Сеть Sales не может отправлять эхо-запросы ICMP в сети Operations или Management. Разрешены эхо-запросы ICMP к другим адресатам.
 
+![ACL R1 ping to Oper   Manage](https://github.com/user-attachments/assets/25514751-6b34-4ae0-9b1c-88dbb5946820)
 
+![ACL PC-B ping ](https://github.com/user-attachments/assets/9f27e3c8-ef4b-4d11-a593-434b3e68900c)
 
+- Политика 4: Cеть Operations  не может отправлять ICMP эхозапросы в сеть Sales. Разрешены эхо-запросы ICMP к другим адресатам.
+
+![ACL R1 ping to Sales](https://github.com/user-attachments/assets/84a89e1b-38bd-46e7-9f30-add195505a68)
+
+![ACL PC-A ping ](https://github.com/user-attachments/assets/65ab99a3-64bf-46d8-8a3a-87f0cb34c8fb)
 
 - Шаг 3. Убедитесь, что политики безопасности применяются развернутыми списками доступа.
 
+![test final](https://github.com/user-attachments/assets/ba8fa453-4358-4cc0-bc85-855bcc289e39)
 
 
 
