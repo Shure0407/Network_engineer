@@ -271,6 +271,42 @@ SSH PC-B to R1
 
 - Шаг 2. Разработка и применение расширенных списков доступа, которые будут соответствовать требованиям политики безопасности.
 
+- Политика1. Сеть Sales не может использовать SSH в сети Management (но в  другие сети SSH разрешен).
+
+![ACL R1 SSH](https://github.com/user-attachments/assets/0472149e-c0f0-45c0-a0e7-dd93aeb1c5cf)
+
+![ACL PC-A SSH](https://github.com/user-attachments/assets/1570929f-ac30-482a-885a-84b5a7b4b276)
+
+![ACL PC-B SSH](https://github.com/user-attachments/assets/1312a12e-3872-44f5-91c2-92b2666b0bbd)
+
+- Политика 2. Сеть Sales не имеет доступа к IP-адресам в сети Management с помощью любого веб-протокола (HTTP/HTTPS). 
+Сеть Sales также не имеет доступа к интерфейсам R1 с помощью любого веб-протокола. 
+Разрешён весь другой веб-трафик (обратите внимание — Сеть Sales  может получить доступ к интерфейсу Loopback 1 на R1).
+
+Дополнил схему подключением к g0/0/0 R1 сервера Server0:
+
+![Net 11 with server](https://github.com/user-attachments/assets/c33aa9df-ec10-46b3-bd52-666d64cf6b5f)
+
+![Server 0 conf](https://github.com/user-attachments/assets/af0b2bab-5cf8-4ee5-92dc-19cbc6d5c55e)
+
+Настроил ACL для доступа к Server0:
+
+![ACL R1 HTTPS last](https://github.com/user-attachments/assets/fc5db8a4-79ad-4d34-b519-0a951285ae15)
+
+PC-A:
+
+![ACL PC-A http ](https://github.com/user-attachments/assets/30b3c714-882a-40bf-b3e2-83f305bef6c7)
+
+![ACL PC-A https ](https://github.com/user-attachments/assets/3e83a302-fc7a-43d0-a0ef-b3fbbae1a5c2)
+
+PC-B:
+
+![ACL PC-B http to serv0 ](https://github.com/user-attachments/assets/3b2cfb68-48df-4adb-8661-5ca6330fee57)
+
+![ACL PC-B https to serv0 ](https://github.com/user-attachments/assets/0598fac9-2470-4352-8cb6-b8ca47911ec0)
+
+- Политика3. Сеть Sales не может отправлять эхо-запросы ICMP в сети Operations или Management. Разрешены эхо-запросы ICMP к другим адресатам.
+
 
 
 
