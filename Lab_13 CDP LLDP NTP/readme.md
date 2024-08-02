@@ -28,11 +28,17 @@
 
 - Шаг 2. Настройте базовые параметры для маршрутизатора.
 
+![R1](https://github.com/user-attachments/assets/294407ac-e23e-49b1-8e69-76ee8a66c0ed)
 
 - Шаг 3. Настройте базовые параметры каждого коммутатора.
 
+S1:
 
+![S1](https://github.com/user-attachments/assets/c879b911-88f7-446a-948b-f261da5ab842)
 
+S2:
+
+![S2](https://github.com/user-attachments/assets/fd784a10-f168-41b0-9ae4-33bed8c97723)
 
 #### Часть 2. Обнаружение сетевых ресурсов с помощью протокола CDP.
 
