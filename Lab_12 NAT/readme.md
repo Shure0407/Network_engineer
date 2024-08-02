@@ -69,33 +69,71 @@ e. Определите внешний (outside) интерфейс.
 R1(config)# interface g0/0/0
 R1(config-if)# ip nat outside
 
+![R1 nat](https://github.com/user-attachments/assets/54292c42-9302-4f6b-a8f2-434e8966b97d)
+
 - Шаг 2. Протестируйте и проверьте конфигурацию. 
 
 a. С PC-B,  запустите эхо-запрос интерфейса Lo1 (209.165.200.1) на R2. 
 Если эхо-запрос не прошел, выполните процес поиска и устранения неполадок. 
 На R1 отобразите таблицу NAT на R1 с помощью команды show ip nat translations.
 
+![PC-B ip conf](https://github.com/user-attachments/assets/ecc5fc44-68c2-4039-a67c-a9af62029f4e)
 
 
 b. С PC-A, запустите  эхо-запрос интерфейса Lo1 (209.165.200.1) на R2. 
 Если эхо-запрос не прошел, выполните отладку. 
 На R1 отобразите таблицу NAT на R1 с помощью команды show ip nat translations.
 
+![PC-A ip conf](https://github.com/user-attachments/assets/f2841bbc-1d23-4d9b-9c54-9e6a9555139d)
+
 
 c. Обратите внимание, что предыдущая трансляция для PC-B все еще находится в таблице. Из S1, эхо-запрос интерфейса Lo1 (209.165.200.1) на R2. 
 Если эхо-запрос не прошел, выполните отладку. На R1 отобразите таблицу NAT на R1 с помощью команды show ip nat translations.
 
+![S1 ip def](https://github.com/user-attachments/assets/abf80bac-bd3f-4fd4-b8d3-d76b7622e818)
+
+![S2 ip def](https://github.com/user-attachments/assets/bc05c065-50a6-4e25-b5f6-85a278845850)
+
 d. Теперь запускаем пинг R2 Lo1 из S2. На этот раз перевод завершается неудачей, и вы получаете эти сообщения (или аналогичные) на консоли R1:
+***Делал два теста (на самом деле их было больше) в первом случае запускал пинги с PC-B, S1, S2 - удачно и  после PC-A - перевод не удачен (выделено красным).
+Во втором случае запускал пинги с PC-A, PC-B, S1 - удачно и  после S2 - перевод не удачен.***
+
+PC-B:
+
+![NAT PC-B ping to R2](https://github.com/user-attachments/assets/008b4b55-a96e-49c2-9491-9447b76ff710)
+
+S1:
+
+![NAT S1 ping to R2](https://github.com/user-attachments/assets/26f9165f-213f-4bf2-9033-0a92a21eaed2)
+
+PC-A:
+
+![NAT PC-A ping to R2](https://github.com/user-attachments/assets/34a74e9c-da67-4696-9094-9cb6aebec32e)
+
+S2:
+
+![NAT S2 ping to R2](https://github.com/user-attachments/assets/b578f059-7f7a-42c9-bbc3-ea9fc14bea7f)
+
 
 
 e. Это ожидаемый результат, потому что выделено только 3 адреса, и мы попытались ping Lo1 с четырех устройств.
 Напомним, что NAT — это трансляция «один-в-один». Как много выделено трансляций? 
 Введите команду show ip nat translations verbose , и вы увидите, что ответ будет 24 часа.
 
+Для первого случая:
+
+![NAT R1 transl block PC-A](https://github.com/user-attachments/assets/f0884f19-de3c-4b9f-823f-a7be9c32eb25)
+
+Для второго случая:
+
+![NAT R1 transl block S2](https://github.com/user-attachments/assets/a60bd016-de36-4c6e-9d65-4a14b46ee056)
+
+***При этом на консоли никакие предупреждающие надписи не выходили***
 
 f. Учитывая, что пул ограничен тремя адресами, NAT для пула адресов недостаточно для нашего приложения.
 Очистите преобразование NAT и статистику, и мы перейдем к PAT.
 
+![NAT R1 clear](https://github.com/user-attachments/assets/02a29025-1fd2-4f2f-910b-e29b834df183)
 
 #### Часть 3. Настройка и проверка PAT для IPv4.
 
