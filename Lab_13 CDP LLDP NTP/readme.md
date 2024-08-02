@@ -34,40 +34,72 @@
 
 S1:
 
-![S1](https://github.com/user-attachments/assets/c879b911-88f7-446a-948b-f261da5ab842)
+![S1 1](https://github.com/user-attachments/assets/ff634034-4cd7-4544-91fd-b0899af53c6d)
+
+![S1 2](https://github.com/user-attachments/assets/a08c531a-91c0-41f7-ba60-1cd7c773b205)
 
 S2:
 
-![S2](https://github.com/user-attachments/assets/fd784a10-f168-41b0-9ae4-33bed8c97723)
+![S2 1](https://github.com/user-attachments/assets/4e6f8153-62e2-4b81-ab83-700e44c86d52)
+
+![S2 2](https://github.com/user-attachments/assets/06d43231-1ec5-48d2-a2cc-fe4736445324)
+
+![S2 3](https://github.com/user-attachments/assets/f9eefb20-285c-4c79-98fa-2dc170e2e349)
 
 #### Часть 2. Обнаружение сетевых ресурсов с помощью протокола CDP.
 
 На устройствах Cisco протокол CDP включен по умолчанию. Воспользуйтесь CDP, чтобы обнаружить порты, к которым подключены кабели.
 Откройте окно конфигурации
+
 a. На R1 используйте соответствующую команду show cdp, чтобы определить, сколько интерфейсов включено CDP, сколько из них включено и сколько отключено.
- 
+
+ ![R1 CDP int](https://github.com/user-attachments/assets/b927982a-259d-4811-a7b0-292f629d9b90)
+
 Вопрос:
 Сколько интерфейсов участвует в объявлениях CDP? Какие из них активны?
-Введите ваш ответ здесь.
+
+Ответ: 
+Задействовано 4 интерфейса G0/0/0-G0/0/2, Vlan1. Активный G0/0/1.
  
 b. На R1 используйте соответствующую команду show cdp, чтобы определить версию IOS, используемую на S1.
 
+![R1 CDP entry S1](https://github.com/user-attachments/assets/119badaf-c4fd-4a95-87d1-bf04e77619c8)
+
+Вопрос:
+Какая версия IOS используется на  S1?
+
+Ответ:
+Используется Версия 15.0(2)SE4
 
 c. На S1 используйте соответствующую команду show cdp, чтобы определить, сколько пакетов CDP было выданных.
 
-
-
+![S1 CDP sh](https://github.com/user-attachments/assets/829860aa-0eb1-4cf8-ad82-4171cb590486)
 
 d. Настройте SVI для VLAN 1 на S1 и S2, используя IP-адреса, указанные в таблице адресации выше. Настройте шлюз по умолчанию для каждого коммутатора на основе таблицы адресов.
 
 e. На R1 выполните команду show cdp entry S1 . 
+
+![R1 CDP entry S1 ip](https://github.com/user-attachments/assets/6208bb73-6a7d-4e52-bbd2-42bc94786b95)
+
 Вопрос:
 Какие дополнительные сведения доступны теперь?
-Введите ваш ответ здесь.
 
+Ответ:
+Теперь доступен ip адрес Vlan1
 
 f. Отключить CDP глобально на всех устройствах. 
 
+R1:
+
+![R1 no cdp run](https://github.com/user-attachments/assets/5a35bcec-b823-4f55-a232-e94499e9ef7f)
+
+S1:
+
+![S1 no cdp run](https://github.com/user-attachments/assets/7cab3a57-27f5-4eae-80e0-1b4c1adf660d)
+
+S2:
+
+![S2 no cdp run](https://github.com/user-attachments/assets/23756d61-272c-4cfd-8b27-690f832c964f)
 
 #### Часть 3. Обнаружение сетевых ресурсов с помощью протокола LLDP.
 На устройствах Cisco протокол LLDP может быть включен по умолчанию. Воспользуйтесь LLDP, чтобы обнаружить порты, к которым подключены кабели.
